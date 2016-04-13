@@ -1,0 +1,18 @@
+#Options -Indexes
+
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+
+RewriteEngine On
+
+#Example of the RewriteEngine:
+#RewriteRule ^detail/([0-9]+)/?$ member.php?userid=$1 [NC,L]
+
+# Resolve .php file for extensionless php urls
+RewriteRule ^api/(\w*)/([\n|\w]*)$ api/$1.php
+RewriteRule ^(\w*)\.html$ html/$1.php
+RewriteRule ^drug/$ html/drug.php
+RewriteRule ^drug/(\w+)$ html/drug.php?drugname=$1 
+
+
+
+

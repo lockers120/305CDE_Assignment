@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Drug Abuse?</title>
+<link rel=stylesheet type="text/css" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<!--<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>-->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="script/script.js" type="text/javascript"></script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+    
+    <div data-role="panel" name="userdetails" id="userdetails" data-display="push">        
+       <div id="userdetail"></div>
+    </div>
+    
+    <div data-role="panel" name="search" data-display="push" data-position="right" id="search">
+       <div>
+           <h4>Search for drug</h4>
+           <input type="text" id="keyword"/><button id="searching">Search</button>
+           <hr>
+           <div data-role="content" id="searchResult">
+           </div>
+       </div>
+    </div>
+    
+    
+    
+	<div data-role="header">
+        <a href="#userdetails" class="ui-btn ui-icon-bars ui-btn-icon-left">My Info</a>
+        <h1>Drug Abuse: </h1>
+        <a href="#search" class="ui-btn ui-icon-search ui-btn-icon-left">Search</a>
+	</div>
+    
+    
+	<div data-role="content">
+        <h2>What is drug abuse?</h2>
+          Drug abuse is the recurrent use of illegal drugs, or the misuse of prescription or over-the-counter drugs with negative consequences. These consequences may involve
+          <br>
+          <ul>
+            <li>Problems at work, school, home or in interpersonal relationships</li>
+            <li>Problems with the law</li>
+            <li>Physical risks that come with using drugs in dangerous situations</li>
+          </ul>
+          (University of Maryland Medical Center, 2013)
+        <!--	
+		<ul data-role="listview">
+			<li><a href="page2.html"  rel="external" data-transition="slide">Page 2</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#main" onclick="mobile.showDrug('lsd')">LSD</a></li>
+            <li><a href="#dialog">Dialog</a></li>
+            <li><a href="#fav">Fav</a></li>
+		</ul>		-->
+	</div>
+    	<div data-role="footer">		
+	</div>
+    </div>
+    
+    
+    
+    <div data-role="page" id="main">
+          <div data-role="panel"  id="userdetailsMain" data-display="push">
+              <a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+              <div id="userdetailMain"></div>
+         </div>
+    
+    <div data-role="panel" name="search" data-display="push" data-position="right" id="searchMain">
+       <div>
+           <h4>Search for drug</h4>
+           <input type="text" id="keywordMain"/><button id="searchingMain">Search</button>
+           <hr>
+           <div data-role="content" id="searchResultMain">
+           </div>
+       </div>
+    </div>
+    
+        <div data-role="header" id="header">
+        </div>
+        <div data-role="header">
+        <a href="#userdetailsMain" class="ui-btn ui-icon-bars ui-btn-icon-left">My Info</a>
+        <h1>Drug Abuse: </h1>
+        <a href="#searchMain" class="ui-btn ui-icon-search ui-btn-icon-left">Search</a>
+	    </div>
+        <div data-role="content" >	    
+        <div id="content">            
+        </div>        
+        <div id="comment"> 
+        </div>
+        <div>           
+            <textarea id="cm" cols="40" rows="5"></textarea>
+            <button id="submit">Submit</button>
+        </div>        
+        </div>
+    </div>
+    
+    <!-- The dialog for edit comment -->
+    <div data-role="dialog" id="dialog" title="Edit Comment" data-close-btn="right"  data-rel="dialog">
+        <div data-role="content">
+        Edit Comment
+        <div id="dialogContent"> 
+            <textarea id='cmedit'' cols='40' row='5'></textarea>   
+            <button id='editcm'>Submit</button>      
+        </div>
+        <button onclick="mobile.closeDialog()">Close</button>
+        </div>
+    </div>
+    
+    <!-- The login part -->
+    <div data-role="page" id="login">
+        <div data-role="header" >
+            <a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+            <h2>Login Page</h2>
+        </div>
+        
+        <div data-role="content" id="loginContent">
+            User name: <input type="text" id="username"><br>
+            Password: <input type="password" id="password"><br>
+            <button id="btnlogin">Login</button>                
+        </div>
+
+    </div>
+    
+    
+     <!-- The Register -->
+    <div data-role="page" id="register">
+        <div data-role="header" >
+            <a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+            <h2>Login Page</h2>
+        </div>
+        
+        <div data-role="content" id="registerContent">
+            User name: <input type="text" id="nameRes">
+            <div id="nameCheck"></div>
+            Password: <input type="password" id="pwRes">
+            Re-enter Password: <input type="password" id="repwRes">
+            <div id="pwCheck"></div>
+            Mail Address: <input type="text" id="mailRes">
+            <div id="mailCheck"></div>
+            <button id="btnRes">Register</button>                
+        </div>
+    </div>
+
+<!-- The Favourite List -->
+<div data-role="page" id="fav">
+    
+    <div data-role="panel" name="userdetails" id="userdetailsFav" data-display="push">        
+       <div id="userdetailFav"></div>
+    </div>
+    
+    <div data-role="panel" data-display="push" data-position="right" id="searchFav">
+       <div>
+           <h4>Search for drug</h4>
+           <input type="text" id="keywordFav"/><button id="searchingFav">Search</button>
+           <hr>
+           <div data-role="content" id="searchResultFav">
+           </div>
+       </div>
+    </div>
+    <div data-role="head">
+        <a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+    </div>
+    <div data-role="content" id="favContent"></div>
+
+</div>
+
+
+
+    
+
+
+
+
+
+
+
+
+</body>
+</html>

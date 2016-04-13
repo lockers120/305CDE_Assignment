@@ -1,0 +1,9 @@
+body{
+    font-family: "Calibri";
+}
+
+#content, #outerbox, #comment, #cmcontainner{
+    margin: 0px auto;
+    float: none;
+    display: table;
+}
